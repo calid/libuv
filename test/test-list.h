@@ -248,7 +248,7 @@ HELPER_DECLARE (pipe_echo_server)
 
 
 TASK_LIST_START
-  TEST_ENTRY_CUSTOM (platform_output,0,1,5000)
+  TEST_ENTRY_CUSTOM (platform_output, 0, 1, 5000)
 
 #if 0
   TEST_ENTRY  (callback_order)
@@ -432,7 +432,7 @@ TASK_LIST_START
 
   TEST_ENTRY  (hrtime)
 
-  TEST_ENTRY_CUSTOM (getaddrinfo_fail,0,0,10000)
+  TEST_ENTRY_CUSTOM (getaddrinfo_fail, 0, 0, 10000)
 
   TEST_ENTRY  (getaddrinfo_basic)
   TEST_ENTRY  (getaddrinfo_concurrent)
