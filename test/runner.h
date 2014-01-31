@@ -42,7 +42,9 @@ typedef struct {
   int is_helper;
   int show_output;
 
-  /* The time in milliseconds after which a single test times out. */
+  /*
+   * The time in milliseconds after which a single test or benchmark times out.
+   */
   int timeout;
 } task_entry_t, bench_entry_t;
 
@@ -70,7 +72,7 @@ typedef struct {
   int run_benchmark_##name(void);
 
 #define BENCHMARK_ENTRY(name)                       \
-    { #name, #name, &run_benchmark_##name, 0, 0 },
+    { #name, #name, &run_benchmark_##name, 0, 0, 60000 },
 
 #define HELPER_DECLARE(name)                        \
   int run_helper_##name(void);
